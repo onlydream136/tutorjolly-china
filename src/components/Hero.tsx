@@ -1,10 +1,20 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sparkles, FileText, Clock } from "lucide-react";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen gradient-hero overflow-hidden">
+    <section className="relative min-h-screen overflow-hidden">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/80 to-primary/60" />
+      
       {/* Background decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl" />
