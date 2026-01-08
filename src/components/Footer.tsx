@@ -1,11 +1,16 @@
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const links = {
     产品: ["功能介绍", "价格方案", "更新日志", "API 文档"],
     资源: ["使用教程", "常见问题", "博客文章", "案例分享"],
     公司: ["关于我们", "加入我们", "联系我们", "合作伙伴"],
-    法律: ["用户协议", "隐私政策", "Cookie 政策"],
+    法律: [
+      { label: "用户协议", href: "#" },
+      { label: "隐私政策", href: "/privacy-policy" },
+      { label: "Cookie 政策", href: "#" },
+    ],
   };
 
   return (
@@ -45,16 +50,32 @@ const Footer = () => {
             <div key={category}>
               <h4 className="font-semibold mb-4">{category}</h4>
               <ul className="space-y-3">
-                {items.map((item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-background/60 hover:text-accent transition-colors text-sm"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                {items.map((item) => {
+                  const isLinkObject = typeof item === "object";
+                  const label = isLinkObject ? item.label : item;
+                  const href = isLinkObject ? item.href : "#";
+                  const isInternalLink = href.startsWith("/");
+
+                  return (
+                    <li key={label}>
+                      {isInternalLink ? (
+                        <Link
+                          to={href}
+                          className="text-background/60 hover:text-accent transition-colors text-sm"
+                        >
+                          {label}
+                        </Link>
+                      ) : (
+                        <a
+                          href={href}
+                          className="text-background/60 hover:text-accent transition-colors text-sm"
+                        >
+                          {label}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
