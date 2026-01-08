@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,9 +38,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-xl gradient-hero flex items-center justify-center">
-              <span className="text-white font-bold text-xl">T</span>
-            </div>
+            <img src={logo} alt="TutorJolly" className="w-10 h-10 object-contain" />
             <span
               className={`text-xl font-bold transition-colors duration-300 ${
                 isScrolled ? "text-foreground" : "text-white"
