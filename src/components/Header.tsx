@@ -38,7 +38,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <img src={logo} alt="TutorJolly" className="w-10 h-10 object-contain" />
+            <img src={logo} alt="TutorJolly" className="w-10 h-10 object-contain rounded-lg" />
             <span
               className={`text-xl font-bold transition-colors duration-300 ${
                 isScrolled ? "text-foreground" : "text-white"
