@@ -3,13 +3,28 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const links = {
-    产品: ["功能介绍", "价格方案", "更新日志", "API 文档"],
-    资源: ["使用教程", "常见问题", "博客文章", "案例分享"],
-    公司: ["关于我们", "加入我们", "联系我们", "合作伙伴"],
+    产品: [
+      { label: "功能介绍", href: "/" },
+      { label: "价格方案", href: "/" },
+      { label: "更新日志", href: "/" },
+      { label: "API 文档", href: "/" },
+    ],
+    资源: [
+      { label: "使用教程", href: "/" },
+      { label: "常见问题", href: "/" },
+      { label: "博客文章", href: "/" },
+      { label: "案例分享", href: "/" },
+    ],
+    公司: [
+      { label: "关于我们", href: "/" },
+      { label: "加入我们", href: "/" },
+      { label: "联系我们", href: "/" },
+      { label: "合作伙伴", href: "/" },
+    ],
     法律: [
-      { label: "用户协议", href: "#" },
+      { label: "用户协议", href: "/" },
       { label: "隐私政策", href: "/privacy-policy" },
-      { label: "Cookie 政策", href: "#" },
+      { label: "Cookie 政策", href: "/" },
     ],
   };
 
@@ -50,32 +65,16 @@ const Footer = () => {
             <div key={category}>
               <h4 className="font-semibold mb-4">{category}</h4>
               <ul className="space-y-3">
-                {items.map((item) => {
-                  const isLinkObject = typeof item === "object";
-                  const label = isLinkObject ? item.label : item;
-                  const href = isLinkObject ? item.href : "#";
-                  const isInternalLink = href.startsWith("/");
-
-                  return (
-                    <li key={label}>
-                      {isInternalLink ? (
-                        <Link
-                          to={href}
-                          className="text-background/60 hover:text-accent transition-colors text-sm"
-                        >
-                          {label}
-                        </Link>
-                      ) : (
-                        <a
-                          href={href}
-                          className="text-background/60 hover:text-accent transition-colors text-sm"
-                        >
-                          {label}
-                        </a>
-                      )}
-                    </li>
-                  );
-                })}
+              {items.map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      to={item.href}
+                      className="text-background/60 hover:text-accent transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           ))}
@@ -86,15 +85,15 @@ const Footer = () => {
             © 2024 TutorJolly. All rights reserved. 京ICP备xxxxxxxx号
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="text-background/40 hover:text-accent text-sm transition-colors">
+            <Link to="/" className="text-background/40 hover:text-accent text-sm transition-colors">
               微信公众号
-            </a>
-            <a href="#" className="text-background/40 hover:text-accent text-sm transition-colors">
+            </Link>
+            <Link to="/" className="text-background/40 hover:text-accent text-sm transition-colors">
               小红书
-            </a>
-            <a href="#" className="text-background/40 hover:text-accent text-sm transition-colors">
+            </Link>
+            <Link to="/" className="text-background/40 hover:text-accent text-sm transition-colors">
               微博
-            </a>
+            </Link>
           </div>
         </div>
       </div>
