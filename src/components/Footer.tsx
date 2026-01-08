@@ -27,15 +27,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-background/60">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                <span>support@tutorjolly.com</span>
+                <span>customerservices@itutorai.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4" />
-                <span>400-888-8888</span>
+                <span>0755-82472601</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                <span>北京市海淀区中关村大街1号</span>
+                <span>深圳市罗湖区国际商品交易大厦7C11</span>
               </div>
             </div>
           </div>
