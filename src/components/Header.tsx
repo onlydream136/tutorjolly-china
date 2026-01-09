@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -7,6 +8,8 @@ import logo from "@/assets/logo.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +26,27 @@ const Header = () => {
     { label: "价格方案", href: "#pricing" },
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+    } else {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== "/") {
+      navigate("/");
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -37,7 +61,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <button onClick={handleLogoClick} className="flex items-center gap-2">
             <img src={logo} alt="TutorJolly" className="w-10 h-10 object-contain rounded-sm" />
             <span
               className={`text-xl font-bold transition-colors duration-300 ${
@@ -46,7 +70,7 @@ const Header = () => {
             >
               TutorJolly
             </span>
-          </a>
+          </button>
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -54,6 +78,7 @@ const Header = () => {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
                 className={`text-sm font-medium transition-colors duration-300 hover:text-primary ${
                   isScrolled ? "text-foreground/80" : "text-white/90"
                 }`}
@@ -113,7 +138,7 @@ const Header = () => {
                   key={link.href}
                   href={link.href}
                   className="block text-foreground/80 hover:text-primary font-medium py-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                 >
                   {link.label}
                 </a>
