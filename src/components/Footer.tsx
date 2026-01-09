@@ -22,7 +22,7 @@ const Footer = () => {
       { label: "合作伙伴", href: "/" },
     ],
     法律: [
-      { label: "用户协议", href: "/" },
+      { label: "用户协议", href: "/user-agreement" },
       { label: "隐私政策", href: "/privacy-policy" },
       { label: "Cookie 政策", href: "/" },
     ],
