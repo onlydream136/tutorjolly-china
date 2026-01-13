@@ -1,36 +1,36 @@
 import { motion } from "framer-motion";
-import { Target, Zap, Brain, Shield, BarChart3, Users } from "lucide-react";
+import { PenTool, FileText, BarChart3, BookOpen, CheckCircle, Users } from "lucide-react";
 
 const features = [
   {
-    icon: Target,
-    title: "精准匹配目标校",
-    description: "AI 分析各校历年真题风格，生成高度匹配的模拟试卷，让学生提前适应考试。",
+    icon: PenTool,
+    title: "智能作文批改",
+    description: "AI深度分析作文内容、结构、语言，提供详细批注和修改建议，秒出评分报告。",
   },
   {
-    icon: Zap,
-    title: "一分钟极速生成",
-    description: "告别繁琐的手动组卷，选择科目和学校，AI 自动生成完整试卷，大幅节省备课时间。",
-  },
-  {
-    icon: Brain,
-    title: "智能题库更新",
-    description: "题库持续更新，紧跟最新考纲和命题趋势，确保每份试卷都符合最新要求。",
-  },
-  {
-    icon: Shield,
-    title: "题目质量保证",
-    description: "每道题目经过严格审核，确保准确性和科学性，避免错题困扰。",
+    icon: FileText,
+    title: "高效试卷生成",
+    description: "一键生成符合教学目标的试卷，支持多科目、多题型，节省80%组卷时间。",
   },
   {
     icon: BarChart3,
-    title: "难度智能调控",
-    description: "根据学生水平自定义难度分布，从基础巩固到冲刺拔高，灵活满足各阶段需求。",
+    title: "数据化教学报告",
+    description: "可视化学生学习轨迹，精准定位薄弱环节，数据驱动教学决策更科学。",
+  },
+  {
+    icon: BookOpen,
+    title: "作业发布与管理",
+    description: "在线发布作业，学生APP提交，自动归档整理，教学管理更轻松。",
+  },
+  {
+    icon: CheckCircle,
+    title: "快速作业批改",
+    description: "支持拍照上传试卷和作业，AI辅助批改，效率提升10倍。",
   },
   {
     icon: Users,
-    title: "多学生管理",
-    description: "一个账号管理所有学生，记录学习轨迹，针对性调整教学策略。",
+    title: "多学生统一管理",
+    description: "一个账号管理所有学生，查看每位学生的学习进度和成绩变化。",
   },
 ];
 
@@ -49,10 +49,10 @@ const Features = () => {
             核心功能
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            为私人导师量身打造
+            为私教老师量身打造
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            TutorJolly 深入理解导师的需求，提供全方位的出题支持
+            TutorJolly 提供Web端教师工具 + 学生APP，让教学管理更便捷
           </p>
         </motion.div>
 

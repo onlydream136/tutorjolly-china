@@ -1,24 +1,24 @@
 import { motion } from "framer-motion";
-import { MousePointerClick, Settings2, Download } from "lucide-react";
+import { UserPlus, Upload, BarChart3 } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    icon: MousePointerClick,
-    title: "选择目标学校",
-    description: "从覆盖的200+学校中选择学生的目标校，系统自动匹配该校的出题风格和难度分布。",
+    icon: UserPlus,
+    title: "注册登录",
+    description: "老师在Web端注册账号，创建班级并添加学生，学生下载APP使用老师分配的账号登录。",
   },
   {
     number: "02",
-    icon: Settings2,
-    title: "自定义设置",
-    description: "选择科目、题型、难度等参数，根据学生实际水平进行个性化调整。",
+    icon: Upload,
+    title: "布置与提交",
+    description: "老师发布作业或试卷，学生在APP端完成并提交，支持拍照上传手写作业。",
   },
   {
     number: "03",
-    icon: Download,
-    title: "生成下载",
-    description: "AI 一分钟内生成完整试卷，包含标准答案和解析，支持 PDF 和 Word 格式导出。",
+    icon: BarChart3,
+    title: "批改与报告",
+    description: "AI辅助快速批改，自动生成详细的学情分析报告，精准定位学生薄弱点。",
   },
 ];
 
@@ -37,10 +37,10 @@ const HowItWorks = () => {
             使用流程
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            三步生成专属试卷
+            简单三步，开启智能教学
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            简单直观的操作流程，让出题变得轻松高效
+            老师Web端 + 学生APP，教学管理更轻松
           </p>
         </motion.div>
 

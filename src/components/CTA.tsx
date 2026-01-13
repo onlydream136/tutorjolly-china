@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles, Smartphone, Monitor } from "lucide-react";
 
 const CTA = () => {
   return (
@@ -29,18 +29,18 @@ const CTA = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-8"
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-white text-sm font-medium">限时优惠 · 首月免费</span>
+            <span className="text-white text-sm font-medium">新用户福利 · 7天免费试用</span>
           </motion.div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            让出题不再成为负担
+            开启智能教学之旅
             <br />
-            <span className="text-accent">今天就开始高效备课</span>
+            <span className="text-accent">让每一次辅导都更高效</span>
           </h2>
 
           <p className="text-lg text-white/80 mb-10 max-w-xl mx-auto">
-            加入10,000+导师的行列，用 TutorJolly 为学生创造更好的学习体验。
-            注册即送30份免费试卷额度。
+            老师使用Web端发布作业、批改试卷、查看报告，
+            学生使用APP做练习、交作业、看反馈，教与学完美协同。
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -48,7 +48,8 @@ const CTA = () => {
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
-              立即免费注册
+              <Monitor className="w-5 h-5 mr-2" />
+              教师端登录
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -56,12 +57,13 @@ const CTA = () => {
               variant="outline"
               className="border-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:border-white/50 font-semibold px-8 py-6 text-lg backdrop-blur-sm"
             >
-              预约演示
+              <Smartphone className="w-5 h-5 mr-2" />
+              下载学生APP
             </Button>
           </div>
 
           <p className="text-white/60 text-sm mt-8">
-            无需绑定信用卡 · 随时可取消 · 7×24小时客服支持
+            支持iOS和Android · 扫码即可下载 · 7×24小时客服支持
           </p>
         </motion.div>
       </div>
