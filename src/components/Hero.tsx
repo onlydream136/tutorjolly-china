@@ -42,14 +42,14 @@ const Hero = () => {
             </motion.div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
-              让家教更轻松
+              告别低效批改
               <br />
-              <span className="text-accent">教学更高效</span>
+              <span className="text-accent">专注精准教学</span>
             </h1>
 
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl mx-auto lg:mx-0">
-              TutorJolly 为私教老师提供一站式教学工具：智能批改作文、高效生成试卷、
-              数据化报告助力精准教学，让您专注于教学本身。
+              批改效率低？学生进度难追踪？家长沟通成本高？TutorJolly 一站式解决私教痛点，
+              让您从繁琐的教辅工作中解放，有更多精力专注教学与招生。
             </p>
 
             {/* 三大卖点 */}

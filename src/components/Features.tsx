@@ -1,36 +1,42 @@
 import { motion } from "framer-motion";
-import { PenTool, FileText, BarChart3, BookOpen, CheckCircle, Users } from "lucide-react";
+import { PenTool, FileText, BarChart3, MessageSquare, Target, Clock } from "lucide-react";
 
 const features = [
   {
     icon: PenTool,
     title: "智能作文批改",
-    description: "AI深度分析作文内容、结构、语言，提供详细批注和修改建议，秒出评分报告。",
-  },
-  {
-    icon: FileText,
-    title: "高效试卷生成",
-    description: "一键生成符合教学目标的试卷，支持多科目、多题型，节省80%组卷时间。",
+    description: "告别逐字逐句批改，AI秒出详细评语和修改建议，批改效率提升10倍。",
+    painPoint: "解决：批改效率低",
   },
   {
     icon: BarChart3,
-    title: "数据化教学报告",
-    description: "可视化学生学习轨迹，精准定位薄弱环节，数据驱动教学决策更科学。",
+    title: "学习进度追踪",
+    description: "可视化学生学习轨迹，自动生成进步曲线，精准定位知识薄弱点。",
+    painPoint: "解决：进度难追踪",
   },
   {
-    icon: BookOpen,
-    title: "作业发布与管理",
-    description: "在线发布作业，学生APP提交，自动归档整理，教学管理更轻松。",
+    icon: FileText,
+    title: "海量题库资源",
+    description: "覆盖多学科多年级题库，一键生成高质量试卷，告别题目匮乏困扰。",
+    painPoint: "解决：题库资源匮乏",
   },
   {
-    icon: CheckCircle,
-    title: "快速作业批改",
-    description: "支持拍照上传试卷和作业，AI辅助批改，效率提升10倍。",
+    icon: MessageSquare,
+    title: "家长沟通报告",
+    description: "自动生成可视化进步报告，一键分享给家长，让教学成果清晰可见。",
+    painPoint: "解决：家长沟通成本高",
   },
   {
-    icon: Users,
-    title: "多学生统一管理",
-    description: "一个账号管理所有学生，查看每位学生的学习进度和成绩变化。",
+    icon: Target,
+    title: "个性化教学方案",
+    description: "基于数据分析，智能推荐针对性练习，实现因材施教、精准提分。",
+    painPoint: "解决：个性化教学难实现",
+  },
+  {
+    icon: Clock,
+    title: "教辅工作减负",
+    description: "自动化处理批改、出卷、报告等繁琐工作，让您有更多精力专注招生。",
+    painPoint: "解决：负担大无暇招生",
   },
 ];
 
@@ -46,13 +52,13 @@ const Features = () => {
           className="text-center mb-16"
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
-            核心功能
+            解决痛点
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            为私教老师量身打造
+            专为私教老师解决六大痛点
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            TutorJolly 提供Web端教师工具 + 学生APP，让教学管理更便捷
+            我们深知家教老师的不易，TutorJolly 针对性解决每一个教辅难题
           </p>
         </motion.div>
 
@@ -66,8 +72,13 @@ const Features = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="group p-8 rounded-2xl bg-card border border-border hover:shadow-elegant hover:border-primary/20 transition-all duration-300"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                <feature.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <div className="flex items-center justify-between mb-4">
+                <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <feature.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+                </div>
+                <span className="text-xs font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  {feature.painPoint}
+                </span>
               </div>
               <h3 className="text-xl font-semibold text-foreground mb-3">
                 {feature.title}

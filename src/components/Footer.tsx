@@ -4,27 +4,23 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const links = {
     产品: [
-      { label: "功能介绍", href: "/" },
-      { label: "价格方案", href: "/" },
+      { label: "功能介绍", href: "#features" },
+      { label: "免费使用", href: "#pricing" },
       { label: "更新日志", href: "/" },
-      { label: "API 文档", href: "/" },
     ],
     资源: [
       { label: "使用教程", href: "/" },
-      { label: "常见问题", href: "/" },
-      { label: "博客文章", href: "/" },
+      { label: "常见问题", href: "#faq" },
       { label: "案例分享", href: "/" },
     ],
     公司: [
-      { label: "关于我们", href: "/" },
+      { label: "关于我们", href: "#about" },
       { label: "加入我们", href: "/" },
       { label: "联系我们", href: "/" },
-      { label: "合作伙伴", href: "/" },
     ],
     法律: [
       { label: "用户协议", href: "/user-agreement" },
       { label: "隐私政策", href: "/privacy-policy" },
-      { label: "Cookie 政策", href: "/" },
     ],
   };
 
