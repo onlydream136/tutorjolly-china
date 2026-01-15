@@ -52,34 +52,6 @@ const Hero = () => {
               将每一道错题转化为提分机会，让辅导真正做到针对性补弱。
             </p>
 
-            {/* 双重价值卖点 */}
-            <div className="grid grid-cols-2 gap-4 mb-8 max-w-lg mx-auto lg:mx-0">
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-                className="flex flex-col items-center lg:items-start gap-2 p-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20"
-              >
-                <div className="flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-accent" />
-                  <span className="text-white text-sm font-semibold">获客钩子</span>
-                </div>
-                <span className="text-white/80 text-xs text-center lg:text-left">一秒AI批改，解放父母双手</span>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                className="flex flex-col items-center lg:items-start gap-2 p-4 rounded-xl bg-accent/20 backdrop-blur-sm border border-accent/30"
-              >
-                <div className="flex items-center gap-2">
-                  <Target className="w-5 h-5 text-accent" />
-                  <span className="text-white text-sm font-semibold">转化核心</span>
-                </div>
-                <span className="text-white/80 text-xs text-center lg:text-left">错题举一反三，精准靶向提分</span>
-              </motion.div>
-            </div>
-
             {/* 三大核心功能 */}
             <div className="grid grid-cols-3 gap-3 mb-8 max-w-lg mx-auto lg:mx-0">
               <motion.div
