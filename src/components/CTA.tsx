@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles, Smartphone, Monitor } from "lucide-react";
+import { ArrowRight, Sparkles, Smartphone, Target, Zap } from "lucide-react";
 
 const CTA = () => {
   return (
@@ -29,27 +29,39 @@ const CTA = () => {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm mb-8"
           >
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-white text-sm font-medium">新用户福利 · 7天免费试用</span>
+            <span className="text-white text-sm font-medium">每周3次免费体验 · 立即开始</span>
           </motion.div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-            开启智能教学之旅
+            别让孩子的错题白错
             <br />
-            <span className="text-accent">让每一次辅导都更高效</span>
+            <span className="text-accent">让每一道题都变成提分机会</span>
           </h2>
 
-          <p className="text-lg text-white/80 mb-10 max-w-xl mx-auto">
-            老师使用Web端发布作业、批改试卷、查看报告，
-            学生使用APP做练习、交作业、看反馈，教与学完美协同。
+          <p className="text-lg text-white/80 mb-8 max-w-xl mx-auto">
+            TutorJolly 不只是批改工具，更是智能提分引擎。
+            基于学校试卷精准推题，让补习真正做到有的放矢。
           </p>
+
+          {/* 双重价值展示 */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
+            <div className="flex items-center gap-2 px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm">
+              <Zap className="w-4 h-4 text-accent" />
+              <span className="text-white text-sm">家长：一秒批改，解放双手</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full backdrop-blur-sm border border-accent/30">
+              <Target className="w-4 h-4 text-accent" />
+              <span className="text-white text-sm">提分：错题变式，精准补弱</span>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg shadow-lg hover:shadow-xl transition-all duration-300 group"
             >
-              <Monitor className="w-5 h-5 mr-2" />
-              教师端登录
+              <Zap className="w-5 h-5 mr-2" />
+              免费体验批改
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button
@@ -63,7 +75,7 @@ const CTA = () => {
           </div>
 
           <p className="text-white/60 text-sm mt-8">
-            支持iOS和Android · 扫码即可下载 · 7×24小时客服支持
+            每周免费3次 · 支持iOS和Android · 扫码即可下载
           </p>
         </motion.div>
       </div>
